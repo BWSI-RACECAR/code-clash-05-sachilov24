@@ -107,12 +107,16 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 ##########################################################################
 
 class Solution:
-    def encrypt(self, message):
-            #type message: string
-            #return type: string
-            
-            #TODO: Write code below to return a string with the solution to the prompt.
-            pass
+    def encrypt(message):
+    cipher =''
+    for letter in message:
+        if letter !='':
+
+            cipher += MORSE_CODE_DICT[letter] +''
+        else:
+            cipher +=''
+ 
+    return cipher
     
             
             
@@ -120,35 +124,6 @@ class Solution:
             # Python program to implement Morse Code Translator
 
 
-    def decrypt(message):
- 
-
-         message +=''
- 
-         decipher =''
-         citext =''
-         for letter in message:
- 
-
-            if (letter !=''):
- 
-             i = 0
- 
-             citext += letter
- 
-            else:
-             i += 1
- 
-            if i == 2 :
- 
-                 decipher +=''
-            else:
- 
-                decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT
-                .values()).index(citext)]
-                citext = ''
-            return decipher
- 
 
 def main():
      str1=input()
