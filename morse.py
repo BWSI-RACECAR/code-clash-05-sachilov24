@@ -120,7 +120,7 @@ class Solution:
             # Python program to implement Morse Code Translator
 
 
-        def decrypt(message):
+    def decrypt(message):
  
 
          message +=''
@@ -139,16 +139,15 @@ class Solution:
             else:
              i += 1
  
-                if i == 2 :
+            if i == 2 :
  
                  decipher +=''
-                else:
+            else:
  
                 decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT
                 .values()).index(citext)]
                 citext = ''
- 
-        return decipher
+            return decipher
  
 
 def main():
