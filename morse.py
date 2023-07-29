@@ -1,21 +1,3 @@
-
-Code Clash #5
-Ali Qattan
-•
-08:59
-100 points
-Due 23:59
-
-Sign in to GitHub · GitHub
-https://classroom.github.com/a/DyJvQ2o7
-
-morse.py
-Text
-Class comments
-Your work
-Assigned
-Private comments
-Assignment details
 """
 Copyright MIT BWSI Autonomous RACECAR Course
 MIT License
@@ -89,7 +71,7 @@ Morse Code Key:
 
 
 Test Cases:
-Input: SOS Output: ...---...
+Input: SOS Output: ... --- ...
 
 
 Input: Hello! Output: .... . .-.. .-.. --- -.-.--
@@ -116,7 +98,7 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                     '4':'....-', '5':'.....', '6':'-....',
                     '7':'--...', '8':'---..', '9':'----.',
                     '0':'-----', '.':'.-.-.-', '?':'..--..', '!':'-.-.--', 
-                    '/':'-..-.', '-':'-....-', '(':'-.--.', ')':'-.--.-'}
+                    '/':'-..-.', '-':'-....-', '(':'-.--.', ')':'-.--.-'," ":""}
 
 
 ##########################################################################
@@ -125,22 +107,15 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 ##########################################################################
 
 class Solution:
-    def encrypt(message):
-        cipher = ''
-        for letter in message:
-            if letter !='':
-
-                cipher += MORSE_CODE_DICT[letter] +''
-            else:
-                cipher +=''
- 
-        return cipher
+    def encrypt(self, message):
+            return "".join(MORSE_CODE_DICT[i.upper()]+" " for i in message)[:-1]
 
 def main():
      str1=input()
      tc1= Solution()
      ans=tc1.encrypt(str1)
      print(ans)
+pass
 
 if __name__ == '__main__':
     main()
